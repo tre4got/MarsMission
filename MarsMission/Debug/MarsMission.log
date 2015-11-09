@@ -1,0 +1,32 @@
+﻿Build started 11/6/2015 11:26:37 AM.
+     1>Project "C:\Users\Trevor\Documents\Visual Studio 2015\Projects\MarsMission\MarsMission\MarsMission.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt TeamBuilder.cpp main.cpp
+         TeamBuilder.cpp
+     1>c:\users\trevor\documents\visual studio 2015\projects\marsmission\marsmission\teambuilder.cpp(11): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>c:\users\trevor\documents\visual studio 2015\projects\marsmission\marsmission\teambuilder.cpp(39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+     1>c:\users\trevor\documents\visual studio 2015\projects\marsmission\marsmission\teambuilder.cpp(46): warning C4018: '<=': signed/unsigned mismatch
+     1>c:\users\trevor\documents\visual studio 2015\projects\marsmission\marsmission\teambuilder.cpp(48): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\trevor\documents\visual studio 2015\projects\marsmission\marsmission\teambuilder.cpp(50): warning C4018: '>=': signed/unsigned mismatch
+     1>c:\users\trevor\documents\visual studio 2015\projects\marsmission\marsmission\teambuilder.cpp(65): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\trevor\documents\visual studio 2015\projects\marsmission\marsmission\teambuilder.cpp(78): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\trevor\documents\visual studio 2015\projects\marsmission\marsmission\teambuilder.cpp(100): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\trevor\documents\visual studio 2015\projects\marsmission\marsmission\teambuilder.cpp(116): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\trevor\documents\visual studio 2015\projects\marsmission\marsmission\teambuilder.cpp(137): warning C4018: '<': signed/unsigned mismatch
+         Generating Code...
+         Compiling...
+         main.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Trevor\Documents\Visual Studio 2015\Projects\MarsMission\Debug\MarsMission.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Trevor\Documents\Visual Studio 2015\Projects\MarsMission\Debug\MarsMission.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Trevor\Documents\Visual Studio 2015\Projects\MarsMission\Debug\MarsMission.lib" /MACHINE:X86 Debug\Compatibility.obj
+         Debug\main.obj
+         Debug\Person.obj
+         Debug\Skill.obj
+         Debug\Team.obj
+         Debug\TeamBuilder.obj
+         MarsMission.vcxproj -> C:\Users\Trevor\Documents\Visual Studio 2015\Projects\MarsMission\Debug\MarsMission.exe
+     1>Done Building Project "C:\Users\Trevor\Documents\Visual Studio 2015\Projects\MarsMission\MarsMission\MarsMission.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.89

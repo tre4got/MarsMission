@@ -1,0 +1,25 @@
+﻿Build started 10/30/2015 11:57:10 AM.
+     1>Project "C:\Users\Trevor\Documents\Visual Studio 2015\Projects\MarsMission\MarsMission\MarsMission.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt Compatibility.cpp main.cpp Person.cpp Skill.cpp Team.cpp TeamBuilder.cpp
+         TeamBuilder.cpp
+     1>c:\users\trevor\documents\visual studio 2015\projects\marsmission\marsmission\teambuilder.cpp(10): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>c:\users\trevor\documents\visual studio 2015\projects\marsmission\marsmission\teambuilder.cpp(38): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+     1>c:\users\trevor\documents\visual studio 2015\projects\marsmission\marsmission\teambuilder.cpp(74): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>c:\users\trevor\documents\visual studio 2015\projects\marsmission\marsmission\teambuilder.cpp(93): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>c:\users\trevor\documents\visual studio 2015\projects\marsmission\marsmission\teambuilder.cpp(118): error C3867: 'TeamBuilder::compareTeams': non-standard syntax; use '&' to create a pointer to member
+     1>c:\users\trevor\documents\visual studio 2015\projects\marsmission\marsmission\teambuilder.cpp(118): error C2780: 'void std::sort(_RanIt,_RanIt)': expects 2 arguments - 3 provided
+         c:\program files (x86)\microsoft visual studio 14.0\vc\include\algorithm(3209): note: see declaration of 'std::sort'
+         Team.cpp
+     1>c:\users\trevor\documents\visual studio 2015\projects\marsmission\marsmission\team.cpp(7): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>c:\users\trevor\documents\visual studio 2015\projects\marsmission\marsmission\team.cpp(96): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+         Skill.cpp
+         Person.cpp
+         main.cpp
+         Compatibility.cpp
+         Generating Code...
+     1>Done Building Project "C:\Users\Trevor\Documents\Visual Studio 2015\Projects\MarsMission\MarsMission\MarsMission.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.77
