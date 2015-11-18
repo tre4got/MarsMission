@@ -31,7 +31,7 @@
           <h1>
 <a id="the-how" class="anchor" href="#the-how" aria-hidden="true"><span class="octicon octicon-link"></span></a>The How</h1>
 
-<p>This Artificial Intelligence (A.I.) will generate 25 teams of 100 people, from a set of 10,000 candidates, that will be optimal for a mission to colonize Mars. The A.I. makes use of a genetic algorithm to build and score potential teams. The algorithm maintains a population size of 100 teams. Each iteration of the algorithm will be referred to as a generation. Each generation will go through several stages:</p>
+<p>This Artificial Intelligence (A.I.) will generate 25 teams of 100 people, from a set of 10,000 candidates, for a mission to colonize Mars. The A.I. makes use of a genetic algorithm to build and score potential teams. The algorithm maintains a population size of 100 teams. Each iteration of the algorithm will be referred to as a generation. Each generation will go through several stages:</p>
 
 <ul>
 <li>Fitness</li>
@@ -62,6 +62,18 @@
 
 <h2>
 <a id="reproduction" class="anchor" href="#reproduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reproduction</h2>
+
+<p>The reproduction stage will replace all the teams we lost to the purge stage with new teams created from a mix of 2 other teams. Each member of the child team is selected from 2 parent teams. </p>
+
+<h2>
+<a id="mutation" class="anchor" href="#mutation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mutation</h2>
+
+<p>In the mutation stage 20 individuals are chosen from each team in the population and they are each given a 10% chance to mutate. The mutation is to simply replace that person with another random from the original candidate list. </p>
+
+<h1>
+<a id="the-why" class="anchor" href="#the-why" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Why</h1>
+
+<p>Selecting 100 people for a mission to colonize Mars is a daunting task. The exhaustive method would be to select several hundred people and put them through rigorous and prolonged testing and slowly weed people until only 100 are left. By using this A.I. you will be presented with a smaller subset of possible teams that are already optimized. </p>
         </section>
 
         <aside id="sidebar">
