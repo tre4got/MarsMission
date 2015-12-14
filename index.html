@@ -49,7 +49,7 @@
 <li>Mutation</li>
 </ul>
 
-<p>Each execution of the loop is called a generation. The algorithm keeps a population of 100 teams and the hope is that after each generation the majority of the teams become better. Below I've documented each stage in more detail and explain how each stage contributes to building better teams over time.</p>
+<p>Each execution of the loop is called a generation. The algorithm keeps a population of 100 teams and the hope is that after each generation the majority of the teams become better. The algorithm also keeps 25 teams stored that represent the best teams generated over the course of the entire execution. Below I've documented each stage in more detail and explain how each stage contributes to building better teams over time.</p>
 
 <h2>
 <a id="fitness" class="anchor" href="#fitness" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fitness</h2>
@@ -90,14 +90,19 @@
 
 <p>The following is some results after running the algorithm for an extended period of time. During that time the algorithm processed 50,000 generations. I've split the results into 3 phases to help show what was happening during that time. </p>
 
-<h2>
-<a id="the-first-stages" class="anchor" href="#the-first-stages" aria-hidden="true"><span class="octicon octicon-link"></span></a>The First Stages</h2>
-
 <p>This graph shows the results of the first 100 generations. </p>
 
 <p><img src="https://cloud.githubusercontent.com/assets/10501020/11771190/245f7784-a1ca-11e5-978b-652cd1e5b5a8.PNG" alt="First"></p>
 
-<p>Since the algorithm begins with 100 randomly selected teams the scores rise very quickly once the algorithm starts applying logic to building teams. You can also see some steps, were the scores seem to level out and then suddenly jump up. This is most likely the result of some random mutation that brought the population out of a local maxima it had gotten stuck at. </p>
+<p>Since the algorithm begins with 100 randomly selected teams the scores rise very quickly once the algorithm starts applying logic to building teams. You can also see some places were the scores seem to level out and then suddenly jump up. This is most likely the result of some random mutation that brought the population out of a local maxima it had gotten stuck at. </p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/10501020/11771188/245eb15a-a1ca-11e5-95c3-0334f3d57cf8.PNG" alt="Second"></p>
+
+<p>The next 1,000 generations are steadily climbing in score. For the first 500 generations there is a steep increase in scores while the last 500 generations seem to get stuck at more local maxima. But again those random mutations eventually allow for jumps in scores followed by more linear progress. </p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/10501020/11771189/245f38f0-a1ca-11e5-9f50-66c0545cf972.PNG" alt="Third"></p>
+
+<p>This last graph shows the scores of the population from generation 1,000 to generation 10,000. You can see the while the first two graphs showed generally linear progression this graph seems to be more scattered, with scores fluctuating between 460 and 490. At this point it becomes very difficult for the algorithm to find better scores since almost any change or mutation will generate a lower score. This is good. This means that the population is being filled with very high scoring teams. </p>
 
 <h1>
 <a id="the-why" class="anchor" href="#the-why" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Why</h1>
