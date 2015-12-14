@@ -35,12 +35,12 @@
 
 <p>This Artificial Intelligence (A.I.) will generate 25 teams of 100 people, from a set of 10,000 candidates, for a mission to colonize Mars. The A.I. makes use of a genetic algorithm to build and score potential teams based on technical skills along with personality types. I've incorporated results from the Myers &amp; Briggs personality test to judge if teams will be likely to get along with each other on the long mission. These colonists will be isolated for an extended period of time with little to no contact with anyone else, which means they'll need to get along with each other in order to be successful. These colonists will also be millions of miles away from any sort of help if things don't go as planned, so it's important that the first colonists have the technical skill and knowledge to build and maintain a colony on an alien planet. </p>
 
-<p><img src="https://cloud.githubusercontent.com/assets/10501020/11771253/f1a4bcb8-a1ca-11e5-87ad-7185580c4579.png" alt="Colony"></p>
+<p><img src="https://cloud.githubusercontent.com/assets/10501020/11771968/9064ff1c-a1d4-11e5-87aa-aafd32ee5db8.png" alt="Genetic"></p>
 
 <h1>
 <a id="genetic-algorithm" class="anchor" href="#genetic-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Genetic Algorithm</h1>
 
-<p>The A.I. will make use of a genetic algorithm to systematically generate and score teams. </p>
+<p>The A.I. will make use of a genetic algorithm to systematically generate and score teams. The genetic algorithm executes a loop with 4 stages</p>
 
 <ul>
 <li>Fitness</li>
@@ -49,15 +49,19 @@
 <li>Mutation</li>
 </ul>
 
+<p>Each execution of the loop is called a generation. The algorithm keeps a population of 100 teams and the hope is that after each generation the majority of the teams become better. Below I've documented each stage in more detail and explain how each stage contributes to building better teams over time.</p>
+
 <h2>
 <a id="fitness" class="anchor" href="#fitness" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fitness</h2>
 
-<p>In the Fitness stage each team in the population will be scored. Teams are scored based on the technical skills of the individual team members as well as the personality types within each team. </p>
+<p>In the Fitness stage each team in the population will be scored. Teams are scored based on the technical skills of the individual team members as well as the personality types within each team. The scoring of teams allows the algorithm to identify which team compositions are successful and which compositions just aren't working out.</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/10501020/11771253/f1a4bcb8-a1ca-11e5-87ad-7185580c4579.png" alt="Colony"></p>
 
 <h3>
 <a id="technical-skills" class="anchor" href="#technical-skills" aria-hidden="true"><span class="octicon octicon-link"></span></a>Technical Skills</h3>
 
-<p>Technical skills will be scored based on the necessity of the skill along with the demand for that skill. For example if there are already 10 Structural Engineers on the team having more would be a burden to the team so additional Structural Engineers will contribute less, or even contribute negatively, to the overall teams score. Right now the only hard requirements for technical skills are that each team must have at least one Doctor and one Psychiatrist. </p>
+<p>Technical skills will be scored based on the necessity of the skill along with the demand for that skill. For example if there are already 10 Structural Engineers on the team having more would be a burden to the team so additional Structural Engineers will contribute less, or even contribute negatively, to the overall teams score. Right now the only hard requirements for technical skills are that each team must have at least one Doctor and one Psychiatrist.</p>
 
 <h3>
 <a id="personality-types" class="anchor" href="#personality-types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Personality Types</h3>
@@ -67,17 +71,22 @@
 <h2>
 <a id="purge" class="anchor" href="#purge" aria-hidden="true"><span class="octicon octicon-link"></span></a>Purge</h2>
 
-<p>During the Purge stage all teams with a negative score, meaning the team has zero chance of survival, will be removed from the population. After all negative scores have been removed the algorithm will start removing teams with the lowest scores. The algorithm will purge at least 20% of the population and at most 60%.</p>
+<p>During the Purge stage all teams with a negative score, meaning the team has zero chance of survival, will be removed from the population. After all negative scores have been removed the algorithm will start removing teams with the lowest scores. The algorithm will purge at least 20% of the population and at most 60%. Removing the least successful team compositions from the population allows the more successful teams to survive to the next generation and hopefully pass on the traits that have made them so successful.</p>
 
 <h2>
 <a id="reproduction" class="anchor" href="#reproduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reproduction</h2>
 
-<p>The reproduction stage will replace all the teams we lost to the purge stage with new teams created from a mix of 2 other teams. Each member of the child team is selected from 2 parent teams. </p>
+<p>The reproduction stage will replace all the teams we lost to the purge stage with new teams created from a mix of 2 other teams. Only the most successful teams will be allowed to reproduce with the hope that taking pieces of 2 teams will lead to an even better team in the next generation. </p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/10501020/11772170/e0d41710-a1d6-11e5-8fb9-77efbd78d748.png" alt="Mutation"></p>
 
 <h2>
 <a id="mutation" class="anchor" href="#mutation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mutation</h2>
 
-<p>In the mutation stage 20 individuals are chosen from each team in the population and they are each given a 10% chance to mutate. The mutation is to simply replace that person with another random from the original candidate list. </p>
+<p>In the mutation stage 20 individuals are chosen from each team in the population and they are each given a 10% chance to mutate. The mutation is to simply replace that person with another random from the original candidate list. Mutation allows the algorithm to explore even more team compositions and will ensure the algorithm doesn't get stuck at any local maxim's. </p>
+
+<h1>
+<a id="results" class="anchor" href="#results" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results</h1>
 
 <h1>
 <a id="the-why" class="anchor" href="#the-why" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Why</h1>
